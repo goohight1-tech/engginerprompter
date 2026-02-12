@@ -18,7 +18,7 @@ export async function generateOptimizedPrompt(userInput: string): Promise<Prompt
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   
   const response = await ai.models.generateContent({
-    model: 'gemini-3-pro-preview',
+    model: 'gemini-2.5-flash',
     contents: userInput,
     config: {
       systemInstruction: SYSTEM_INSTRUCTION,
